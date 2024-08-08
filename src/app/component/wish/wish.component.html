@@ -1,0 +1,36 @@
+<!-- <div class="product" *ngFor="let product of products">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <p>Price: {{ product.price | currency }}</p>
+    <button (click)="toggleFavorite(product)">
+      <i class="favorite-icon" [ngClass]="{'favorite': product.isFavorite}">
+        {{ product.isFavorite ? '★' : '☆' }}
+      </i>
+    </button>
+  </div>
+   -->
+
+
+   <div *ngIf="favoriteProducts.length > 0; else noFavorites">
+    <div class="container">
+      <div class="row">
+    <div class="col-md-4" *ngFor="let product of favoriteProducts">
+      <div>
+        <img class="img_show" [src]="product.image" alt="" class="w-100 rounded">
+        <div class="border border-danger border-1">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price | currency }}</p>
+      <button (click)="removeFavorite(product.id)">Remove from Favorites</button>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+  <ng-template #noFavorites>
+    <p>No favorite products yet.</p>
+  </ng-template>
+  

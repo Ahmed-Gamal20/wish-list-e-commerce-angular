@@ -1,0 +1,15 @@
+.favorite-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+  }
+  
+  .favorite-icon.favorite {
+    color: gold;
+  }
+  .img_show{
+    height: 300px;
+    object-fit: fill;
+    overflow: hidden;
+
+  }

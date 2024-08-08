@@ -1,0 +1,24 @@
+<h1 class="text-center p-4 m-3">All Products</h1>
+<div class="container">
+    <div class="row m-2 top-3">
+      
+        @for (x of productitem; track $index) {
+            
+        <div class="col-md-4 ">
+            <div class="m-1 border border-1 border-danger ">
+            <img [src]="x.image" alt="" class="w-100 rounded ">
+            <div class="m-1 p-1 ">
+                <h5>title: {{x.title}}</h5>
+                <p>category:{{x.category}}</p>
+                <button (click)="toggleFavorite(x.id)">
+                    <i [ngClass]="{'favorite-icon': true, 'favorite': isFavorite(x.id)}">
+                      {{ isFavorite(x.id) ? '★ Remove from Favorites' : '☆ Add to Favorites' }}
+                    </i>
+                  </button>
+            </div>
+            </div>
+            </div>
+        }
+    </div>
+</div>
+<h1></h1>
