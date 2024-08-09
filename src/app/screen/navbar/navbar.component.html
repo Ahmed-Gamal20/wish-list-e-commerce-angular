@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-white sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,14 +8,14 @@
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           
           <li class="nav-item">
-            <a class="nav-link" routerLink="home"  routerLinkActive="bg-danger" >Home</a>
+            <a class="nav-link" routerLink="home"  routerLinkActive="bg-danger rounded" >Home</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" routerLink="pro"  routerLinkActive="bg-danger" >Product</a>
+            <a class="nav-link" routerLink="pro"  routerLinkActive="bg-danger rounded" >Product</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="fav" routerLinkActive="bg-danger">Fav</a>
+            <a class="nav-link" routerLink="fav" routerLinkActive="bg-danger rounded"><i class="fa-solid fa-heart"></i> [{{ favoriteCount }}]</a>
           </li>
         </ul>
         
